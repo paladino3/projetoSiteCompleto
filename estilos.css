@@ -30,7 +30,7 @@ header{
     text-decoration: none;
     display: table-cell; /*forma de lita*/
     margin: 0px;
-    width: 100px;
+    width: 120px;
     height: 30px;
     background-color: #222;
     padding: 1px 5px 1px 5px;
@@ -42,15 +42,46 @@ header{
     font-size: 10px;
     cursor: pointer;
     border: 0px;
+    text-transform: uppercase;
 }
 .btMenu:hover {
     background-color: #c22;
     color: #fff;
+}
 
+.menu_ger{
+	display:inline-block;
 }
-.fixProjtc{
-    
+
+.menub{
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	width:120px;
+	margin:0px;
+	background-color:#ddd;
+	border-radius:10px;
+	cursor:pointer;
+	border:0px;
+	/*visibility:hidden;*/
 }
+
+.menub a{
+	color:#000;
+	padding:12px 16px;
+	text-decoration:none;
+	display:block;
+	font-family:Arial;
+	font-size:10px;
+	text-transform:uppercase;
+}
+
+.menub a:hover{
+	color:#fff;
+	font-weight:bold;
+}
+
+
 #slider{
     margin: 0px;
     border: 0px;
@@ -153,4 +184,14 @@ footer a{
 #f_login input[type=submit]:hover{
     background-color: #c22;
     color: #fff;
+}
+#lgErro{
+    color: #f00;
+    font-size: 20px;
+    padding: 5px;
+    border: 3px solid #888;
+    border-radius: 10px;
+    width: 290px;
+    text-align: center;
+    background-color: #eee;
 }
