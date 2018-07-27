@@ -22,5 +22,9 @@
         include 'buscador.php';
         ?>
         </section>
+        
+        <?php
+        echo "sdasdasd";
+        ?>
     </body>
 </html>
