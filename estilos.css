@@ -1,0 +1,94 @@
+body{
+    margin:0 auto;
+    width: 960px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(imgs/fundo_topo.jpg);
+    background-repeat: repeat-x;
+}
+header{
+    height: 122px;
+}
+
+#logo_topo{
+    width: 301px;
+    height: 110px;
+    background-color: #000;
+    background-image: url(imgs/logo.svg);
+    float: left;
+}
+#menu{
+    width:659px; 
+    height: 111px;
+    background-color: #000;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 0px 0px 259px;
+}
+.btMenu{
+    text-decoration: none;
+    display: table-cell; /*forma de lita*/
+    margin: 0px;
+    width: 100px;
+    height: 30px;
+    background-color: #222;
+    padding: 1px 5px 1px 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #bbb;
+    font-family: Arial;
+    font-size: 10px;
+    cursor: pointer;
+    border: 0px;
+}
+.btMenu:hover {
+    background-color: #c22;
+    color: #fff;
+
+}
+.fixProjtc{
+    
+}
+#slider{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    background-color: #e7e7e7;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    
+    left: 0px; 
+}
+#s1,#s2,#s3,#s4,#s5{
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: absolute;
+}
+#buscador{
+   width: 960px;
+   margin: 410px 0px 0px 0px;
+}
+#fbuscador{
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+#divBusca{
+    margin: auto;
+    float: left;
+}
+label{
+    display: block;
+}
+.titulo{
+    font-size: 22px;
+    color: #bbb;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
+    
+}

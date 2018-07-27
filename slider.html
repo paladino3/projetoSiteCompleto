@@ -1,0 +1,30 @@
+
+<script src="slides/jquery-3.1.1.min.js"></script>
+<script>
+    var slides=["#s1","#s2","#s3","#s4","#s5"];
+    slideAtual=0;
+    slideMax=4;
+    tempo=10000;
+   
+    $(document).ready(function(){
+         $(slides[slideAtual]).fadeTo(1000,1);
+    setInterval(troca,tempo);
+    function troca(){
+        $(slides[slideAtual]).fadeTo(1000,0);
+        slideAtual++;
+        if(slideAtual > slideMax){
+            slideAtual=0;
+        }
+        $(slides[slideAtual]).fadeTo(1000,1);
+    }
+    });
+ 
+</script>
+
+
+
+<img id="s1" src="slides/slide1.jpg"/>
+<img id="s2" src="slides/slide2.jpg"/>
+<img id="s3" src="slides/slide3.jpg"/>
+<img id="s4" src="slides/slide4.jpg"/>
+<img id="s5" src="slides/slide5.jpg"/>
