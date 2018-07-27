@@ -92,3 +92,65 @@ label{
     margin: 0px 0px 10px 0px;
     
 }
+#destaques{
+    display: flex;
+    padding: 15px 0px;
+}
+.destaques{
+    margin: auto;
+    padding: 50px;
+    background-color: #000;
+    border-radius: 100%;
+}
+.destaques:hover{
+    background: #c22;
+}
+
+footer{
+    background: #222;
+    padding: 1px 20px;
+    margin:15px 0px 0px 0px; 
+    color: #fff;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #111;
+}
+#main{
+    padding-top: 20px; 
+}
+#f_login input[type=text],input[type=password]{
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 15px;
+    color: #888;
+    width: 300px;
+}
+#f_login label{
+    font-size: 20px;
+    color: #888;
+}
+#f_login input[type=submit]{
+    
+    text-decoration: none;
+    display: table-cell; /*forma de lita*/
+    margin: 0px;
+    width: 300px;
+    height: 40px;
+    background-color: #222;
+    padding: 1px 5px 1px 5px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #bbb;
+    font-family: Arial;
+    font-size: 10px;
+    cursor: pointer;
+    border: 0px;
+}
+#f_login input[type=submit]:hover{
+    background-color: #c22;
+    color: #fff;
+}

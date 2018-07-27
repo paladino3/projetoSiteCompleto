@@ -22,9 +22,16 @@
         include 'buscador.php';
         ?>
         </section>
-        
+        <section id="destaques">
         <?php
-        echo "sdasdasd";
+        include 'destaques.html';
         ?>
+        </section>
+        <footer id="rodape">
+        <?php
+        include 'rodape.html';
+        ?>
+        </footer>
+   
     </body>
 </html>
