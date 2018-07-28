@@ -1,9 +1,46 @@
+
+
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Carros & cia</title>
         <link rel="stylesheet" href="estilos.css">
-        
+        <script src="slides/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script>
+			$(document).ready(function(){
+				$("#menub1,#menub2,#menub3,#menub4").css("visibility","hidden");
+				$("#menua1").click(function(){
+					$("#menub1").css("visibility","visible");
+					$("#menub2").css("visibility","hidden");
+					$("#menub3").css("visibility","hidden");
+					$("#menub4").css("visibility","hidden");
+				});
+				$("#menua2").click(function(){
+					$("#menub2").css("visibility","visible");
+					$("#menub1").css("visibility","hidden");
+					$("#menub3").css("visibility","hidden");
+					$("#menub4").css("visibility","hidden");
+				});
+				$("#menua3").click(function(){
+					$("#menub3").css("visibility","visible");
+					$("#menub1").css("visibility","hidden");
+					$("#menub2").css("visibility","hidden");
+					$("#menub4").css("visibility","hidden");
+				});
+				$("#menua4").click(function(){
+					$("#menub4").css("visibility","visible");
+					$("#menub3").css("visibility","hidden");
+					$("#menub2").css("visibility","hidden");
+					$("#menub1").css("visibility","hidden");
+				});
+				$("#menub1,#menub2,#menub3,#menub4").mouseover(function(){
+					$(this).css("visibility","visible");
+				});
+				$("#menub1,#menub2,#menub3,#menub4").mouseout(function(){
+					$(this).css("visibility","hidden");
+				});
+			});
+		</script>
     </head>
     <body>
         <header>
