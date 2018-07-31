@@ -1,10 +1,25 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Carros & cia</title>
-        <link rel="stylesheet" href="estilos.css">
-        <script src="slides/jquery-3.1.1.min.js" type="text/javascript"></script>
-        <script>
+<?php
+	session_start();
+	if(isset($_SESSION["numlogin"])){
+		$n1=$_GET["num"];
+		$n2=$_SESSION["numlogin"];
+		if($n1!=$n2){
+			echo "<p>Login não efetuado</p>";
+			exit;
+		}
+	}else{
+		echo "<p>Login não efetuado</p>";
+		exit;
+	}
+?>
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>CFB Veículos</title>
+		<meta charset=“utf-8”/>
+		<link rel="stylesheet" href="estilos.css"/> 
+		<script src="jquery-3.1.1.min.js"></script>
+		<script>
 			$(document).ready(function(){
 				$("#menub1,#menub2,#menub3,#menub4").css("visibility","hidden");
 				$("#menua1").click(function(){
@@ -39,20 +54,22 @@
 				});
 			});
 		</script>
-    </head>
-    <body>
-        <header>
-        <?php
-        include 'topo.php';
-        ?>
-        </header>
-      
-        <section>
-          <p>Menu principal de gerenciamento</p>  
-        </section>
-       <nav>
+	</head>
+	<body>
+	
+		<header>
+			<?php
+				include "topo.php";
+			?>
+		</header>
+		
+		<section>
+			<p>Menu principal de gerenciamento</p>
+		</section>
+		
+		<nav>
 			<div class="menu_ger">
-				<button id="menua1" class="btmenu">carros</button>
+				<button id="menua1" class="btMenu">carros</button>
 				<div id="menub1" class="menub">
 					<a href="#" target="_self">novo</a>
 					<a href="#" target="_self">editar</a>
@@ -61,21 +78,27 @@
 				</div>
 			</div>
 			<div class="menu_ger">
-				<button id="menua2" class="btmenu">slider</button>
+				<button id="menua2" class="btMenu">slider</button>
 				<div id="menub2" class="menub">
 					<a href="#" target="_self">configurar</a>
 				</div>
 			</div>
+			<?php
+				if($_SESSION['acesso']==1){
+					echo "
+						<div class='menu_ger'>
+							<button id='menua3' class='btMenu'>usuarios</button>
+							<div id='menub3' class='menub'>
+								<a href='novo_usuario.php?num=$n1' target='_self'>novo</a>
+								<a href='#' target='_self'>editar</a>
+								<a href='#' target='_self'>excluir</a>
+							</div>
+						</div>
+					";
+				}
+			?>
 			<div class="menu_ger">
-				<button id="menua3" class="btmenu">usuarios</button>
-				<div id="menub3" class="menub">
-					<a href="#" target="_self">novo</a>
-					<a href="#" target="_self">editar</a>
-					<a href="#" target="_self">excluir</a>
-				</div>
-			</div>
-			<div class="menu_ger">
-				<button id="menua4" class="btmenu">logoff</button>
+				<button id="menua4" class="btMenu">logoff</button>
 				<div id="menub4" class="menub">
 					<a href="#" target="_self">sair</a>
 				</div>
